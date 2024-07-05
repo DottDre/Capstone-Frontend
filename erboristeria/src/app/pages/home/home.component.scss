@@ -1,0 +1,24 @@
+.image{
+  background-image: url("../../../assets/erboristeriaHome.jpg");
+  display: block;
+  height: 60vh; /* Assicura che il background copra l'intera altezza della vista */
+  background-size: cover; /* Assicura che l'immagine copra tutta l'area disponibile */
+  background-position: center; /* Centra l'immagine */
+  background-repeat: no-repeat;
+  padding-top: 20px;
+
+}
+.image .container {
+  height: 100%; /* Assicura che il contenitore interno copra l'intera altezza */
+}
+
+.image .row {
+  height: 100%; /* Assicura che la riga copra l'intera altezza */
+}
+
+.text-left {
+  background-color: rgba(2, 42, 3, 0.5);
+  color: white; /* Colore del testo */
+  padding: 20px; /* Spazio intorno al testo */
+  border-radius: 10px; /* Angoli arrotondati */
+}

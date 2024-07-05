@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   loginData:ILoginData = {
-    username: '',
-    password: ''
+    username: "john_doe",
+    password: "securePassword123",
   }
 
   constructor(
