@@ -22,6 +22,29 @@
   </div>
 </div>
 <div class="container">
-
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Benvenuto nel nostro negozio di erboristeria!</h2>
+      <p>Qui troverai una vasta selezione di prodotti naturali per il benessere del corpo e della mente.</p>
+    </div>
+    <div class="col-md-6">
+      <ngb-carousel *ngIf="images" class="custom-carousel">
+        <ng-template ngbSlide *ngFor="let image of images">
+          <div class="carousel-image-container">
+            <img class="img-fluid" [src]="image.url" alt="{{ image.alt }}">
+          </div>
+          <div class="carousel-caption">
+            <h3>{{ image.title }}</h3>
+            <p>{{ image.description }}</p>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+  </div>
 </div>
+
+
+
+
+
 

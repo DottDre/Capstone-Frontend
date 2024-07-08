@@ -36,7 +36,7 @@ export class ProductService {
     return this.products.find(u => u.id == id) || null
   }
 
-  update(product:Iproduct){
+  update(id: number, product: Iproduct){
     return this.http.put<Iproduct>(this.apiUrl+`/${product.id}`,product)
     .pipe(tap(res =>{
       const index = this.products.findIndex(u => u.id == product.id)
@@ -67,7 +67,11 @@ uploadImageForProduct(file: File) {
   formData.append('imgFile', file);
 
   return this.http.post<any>(`${this.apiUrl}/upload-image`, formData);
-  // Assumi che il backend gestisca l'upload dell'immagine e ritorni la risposta con l'URL dell'immagine
+
+}
+delete(id: number): Observable<any> {
+  return this.http.delete(`${this.apiUrl}/${id}`, { responseType: 'text' });
 }
 }
+
 

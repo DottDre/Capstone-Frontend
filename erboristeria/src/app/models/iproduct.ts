@@ -6,6 +6,6 @@ export interface Iproduct {
   description:string,
   price:number,
   stock:number,
-  categoryId:Icategory
-  imgFile?: File; //
+  category:Icategory
+  img?: string;
 }

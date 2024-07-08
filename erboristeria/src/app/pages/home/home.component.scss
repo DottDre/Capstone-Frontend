@@ -22,3 +22,35 @@
   padding: 20px; /* Spazio intorno al testo */
   border-radius: 10px; /* Angoli arrotondati */
 }
+.custom-carousel {
+  max-height: 300px; // Altezza massima del carosello
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); // Sfondo semi-trasparente per il caption
+  padding: 10px;
+  color: #fff; // Testo bianco
+}
+
+.carousel-caption h3 {
+  font-size: 1.2rem; // Dimensione del titolo ridotta
+  font-weight: bold;
+  margin-bottom: 5px; // Ridotto il margine inferiore
+}
+
+.carousel-caption p {
+  font-size: 0.9rem; // Dimensione del testo descrizione ridotta
+}
+
+.carousel-image-container {
+  height: 100%; // Altezza al 100% dell'elemento genitore (il carosello)
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image-container img {
+  max-height: 100%; // Altezza massima dell'immagine all'interno del container
+  width: auto; // Larghezza automatica per mantenere le proporzioni
+  max-width: 100%; // Larghezza massima dell'immagine
+}

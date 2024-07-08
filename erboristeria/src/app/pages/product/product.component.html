@@ -1,38 +1,22 @@
-<form class="pt-5">
-
-  <input type="text" name="name"
-  [(ngModel)]="newCategory.name"
-  class="form-control" placeholder="name">
-
-  <button (click)="addCategory()" class="btn btn-primary">Crea</button>
-
-
-</form>
-
-<form (ngSubmit)="addProduct()" enctype="multipart/form-data">
-  <div class="form-group">
-    <label for="name">Nome del Prodotto</label>
-    <input type="text" id="name" name="name" [(ngModel)]="newProduct.name" class="form-control" placeholder="Nome" required>
+<div class="container">
+  <button class="btn btn-primary" (click)="openCategoryModal()">Add Category</button>
+  <button class="btn btn-primary" (click)="openProductModal()">Aggiungi Prodotto</button>
+  <div class="row">
+<div class="container">
+  <div class="row">
+    <div *ngFor="let product of products" class="col-md-4">
+      <div class="card mb-4">
+        <img *ngIf="product.img" [src]="product.img" class="card-img-top" alt="{{product.name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text"><strong>Price:</strong> {{ product.price | currency }}</p>
+          <p class="card-text"><strong>Stock:</strong> {{ product.stock }}</p>
+          <p class="card-text"><strong>Category:</strong> {{ product.category.name}}</p>
+          <button class="btn btn-warning" (click)="openEditModal(product)">Edit</button>
+          <button class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="description">Descrizione del Prodotto</label>
-    <input type="text" id="description" name="description" [(ngModel)]="newProduct.description" class="form-control" placeholder="Descrizione" required>
-  </div>
-  <div class="form-group">
-    <label for="stock">Quantità in Magazzino</label>
-    <input type="number" id="stock" name="stock" [(ngModel)]="newProduct.stock" class="form-control" placeholder="Quantità" required>
-  </div>
-  <div class="form-group">
-    <label for="price">Prezzo</label>
-    <input type="number" id="price" name="price" [(ngModel)]="newProduct.price" class="form-control" placeholder="Prezzo" required>
-  </div>
-  <div class="form-group">
-    <label for="category">Categoria</label>
-    <input type="text" id="category" name="category" [(ngModel)]="newProduct.categoryId" class="form-control" placeholder="Categoria" required>
-  </div>
-  <div class="form-group">
-    <label for="Image">Immagine</label>
-    <input type="file" id="image" name="image" class="form-control" (change)="onFileSelected($event)">
-  </div>
-  <button type="submit" class="btn btn-primary">Crea Prodotto</button>
-</form>
+</div>
