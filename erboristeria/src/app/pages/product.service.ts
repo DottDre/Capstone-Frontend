@@ -36,14 +36,14 @@ export class ProductService {
     return this.products.find(u => u.id == id) || null
   }
 
-  update(id: number, product: Iproduct){
-    return this.http.put<Iproduct>(this.apiUrl+`/${product.id}`,product)
-    .pipe(tap(res =>{
-      const index = this.products.findIndex(u => u.id == product.id)
-      this.products.splice(index, 1 , res)
-      this.producSubject.next(this.products)
-    }))
+  updateProductWithImage(productId: number, formData: FormData): Observable<Iproduct> {
+    console.log(formData);
+
+    return this.http.put<Iproduct>(`${this.apiUrl}/${productId}`, formData);
+    ;
+
   }
+
 
   create(product:Partial<Iproduct>){
     const httpOptions = {

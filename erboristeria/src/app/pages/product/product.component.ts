@@ -8,6 +8,7 @@ import { Subscription } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryModalComponent } from '../../category-modal/category-modal.component';
 import { ProductModalComponent } from '../../product-modal/product-modal.component';
+import { ProductEditModalComponent } from '../../product-edit-modal/product-edit-modal.component';
 
 @Component({
   selector: 'app-product',
@@ -110,12 +111,25 @@ export class ProductComponent {
     }
   }
 
-  editProduct(product: Iproduct) {
-    this.editingProduct = { ...product };
-  }
-  openEditModal(product: Iproduct | null) {
-    const modalRef = this.modalService.open(ProductModalComponent, { size: 'lg' });
-    modalRef.componentInstance.product = product;
+  openEditModal(product: Iproduct) {
+    const modalRef = this.modalService.open(ProductEditModalComponent, { size: 'lg' });
+    modalRef.componentInstance.isNewProduct = false;
+    modalRef.componentInstance.product = { ...product }; // Passa una copia del prodotto
+
+    modalRef.result.then(
+      (result: Iproduct | undefined) => {
+        if (result) {
+          // Aggiorna la lista dei prodotti o gestisci il risultato
+          const index = this.products.findIndex(p => p.id === result.id);
+          if (index !== -1) {
+            this.products[index] = result; // Aggiorna il prodotto nella lista
+          }
+        }
+      },
+      (reason) => {
+        console.log('Modal dismissed with reason:', reason);
+      }
+    );
   }
 
   deleteProduct(id: number) {

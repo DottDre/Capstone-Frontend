@@ -11,6 +11,8 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 import { CategoryModalComponent } from './category-modal/category-modal.component';
 import { FormsModule } from '@angular/forms';
 import { ProductModalComponent } from './product-modal/product-modal.component';
+import { ProductEditModalComponent } from './product-edit-modal/product-edit-modal.component';
+
 
 
 
@@ -21,6 +23,7 @@ import { ProductModalComponent } from './product-modal/product-modal.component';
     FooterComponent,
     CategoryModalComponent,
     ProductModalComponent,
+    ProductEditModalComponent
   ],
   imports: [
     BrowserModule,
