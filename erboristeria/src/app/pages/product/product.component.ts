@@ -9,6 +9,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryModalComponent } from '../../category-modal/category-modal.component';
 import { ProductModalComponent } from '../../product-modal/product-modal.component';
 import { ProductEditModalComponent } from '../../product-edit-modal/product-edit-modal.component';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-product',
@@ -28,8 +29,8 @@ export class ProductComponent {
   constructor(
     private prodSvc: ProductService,
     private catSvc: CategoriesService,
-    private modalService: NgbModal
-
+    private modalService: NgbModal,
+    private cartSvc:CartService
   ) {}
 
   ngOnInit() {
@@ -158,5 +159,9 @@ export class ProductComponent {
     });
 
     this.subscriptions.add(refreshProductsSub);
+  }
+  addToCart(product: Iproduct) {
+    this.cartSvc.addToCart(product);
+    console.log('Prodotto aggiunto al carrello:', product);
   }
 }

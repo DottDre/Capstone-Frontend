@@ -2,8 +2,35 @@
   <button class="btn btn-primary" (click)="openCategoryModal()">Add Category</button>
   <button class="btn btn-primary" (click)="openProductModal()">Aggiungi Prodotto</button>
   <div class="row">
-<div class="container">
-  <div class="row">
+    <div class="col-md-6" *ngFor="let product of products">
+      <div class="wrapper">
+        <div class="product-img">
+          <img [src]="product.imgFile" [alt]="product.name">
+        </div>
+        <div class="product-info">
+          <div class="product-text">
+            <h1>{{ product.name }}</h1>
+            <h2>Articoli disponibili:{{ product.stock }}</h2>
+            <p>{{ product.description }}</p>
+          </div>
+          <div class="product-price-btn">
+            <p><span>{{ product.price }}</span>$</p>
+            <button type="button" (click)="addToCart(product)">Aggiugni al carrello</button>
+            <button type="button" (click)="openEditModal(product)">Modifica il prodotto</button>
+            <button type="button" (click)="deleteProduct(product.id)">Elimina il prodotto</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!--<div class="row">
     <div *ngFor="let product of products" class="col-md-4">
       <div class="card mb-4">
         <img *ngIf="product.imgFile" [src]="product.imgFile" class="card-img-top" alt="{{product.name}}">
@@ -15,8 +42,9 @@
           <p class="card-text"><strong>Category:</strong> {{ product.categoryId.name}}</p>
           <button class="btn btn-warning" (click)="openEditModal(product)">Edit</button>
           <button class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button>
+           Aggiungi il pulsante "Aggiungi al Carrello"
+          <button class="btn btn-success" (click)="addToCart(product)">Aggiungi al Carrello</button>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>-->

@@ -8,16 +8,18 @@
   padding-top: 20px;
 
 }
-.image .container {
-  height: 100%; /* Assicura che il contenitore interno copra l'intera altezza */
+.btn{
+  font-weight: bold;
 }
-
-.image .row {
-  height: 100%; /* Assicura che la riga copra l'intera altezza */
+h1, h2{
+  font-weight: bold;
 }
-
+.p{
+  font-size: 20px;
+}
 .text-left {
-  background-color: rgba(2, 42, 3, 0.5);
+  background-color:#8fc79d;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   color: white; /* Colore del testo */
   padding: 20px; /* Spazio intorno al testo */
   border-radius: 10px; /* Angoli arrotondati */
@@ -50,7 +52,10 @@
 }
 
 .carousel-image-container img {
-  max-height: 100%; // Altezza massima dell'immagine all'interno del container
-  width: auto; // Larghezza automatica per mantenere le proporzioni
-  max-width: 100%; // Larghezza massima dell'immagine
+  height: 500px;// Altezza massima dell'immagine all'interno del container
+  width: 100%; // Larghezza automatica per mantenere le proporzioni
+  max-width: 100%;
+  background-size: contain;
+  background-position: center; // Larghezza massima dell'immagine
 }
+

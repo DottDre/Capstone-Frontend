@@ -1,1 +1,9 @@
-<p>order works!</p>
+<div class="order">
+  <h2>Conferma Ordine</h2>
+  <ul>
+    <li *ngFor="let item of cartItems">
+      {{ item.name }} - {{ item.price | currency }}
+    </li>
+  </ul>
+  <button (click)="placeOrder()">Effettua Ordine</button>
+</div>

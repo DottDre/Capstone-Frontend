@@ -1,33 +1,33 @@
 <div class="image">
   <div class="container h-100">
-    <div class="row h-100  align-items-center">
+    <div class="row h-100 align-items-center">
       <div class="col-6 text-left">
-        <h1>Scopri il potere della natura</h1>
-        <p>
-          Siamo un negozio di erboristeria dedicato a portare la natura nella tua
+        <h1 class="text-black">Scopri il potere della natura</h1>
+        <p class="text-black">
+          Siamo un negozio di Erboristeria dedicato a portare la natura nella tua
           vita quotidiana. La nostra missione è fornire soluzioni naturali per la
           tua salute e il tuo benessere.
         </p>
-        <ul>
+        <ul class="text-black">
           <li>Prodotti 100% naturali e biologici</li>
           <li>Rigorosa selezione delle materie prime</li>
           <li>Sostenibilità e rispetto per l'ambiente</li>
         </ul>
-        <p>
+        <p class="text-black">
           Esplora il nostro catalogo e trova il prodotto naturale perfetto per te.
         </p>
-        <button routerLink="/product" class="btn btn-primary">Vai al catalogo</button>
+        <button routerLink="/product" class="btn border-black">Vai al catalogo</button>
       </div>
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <h2>Benvenuto nel nostro negozio di erboristeria!</h2>
-      <p>Qui troverai una vasta selezione di prodotti naturali per il benessere del corpo e della mente.</p>
+<div class="sfondo">
+  <div class="container">
+    <div class="text-center my-5">
+      <h2>Benvenuto nel nostro negozio di Erboristeria!</h2>
+      <p class="p">Qui troverai una vasta selezione di prodotti naturali per il benessere del corpo e della mente.</p>
     </div>
-    <div class="col-md-6">
+    <div>
       <ngb-carousel *ngIf="images" class="custom-carousel">
         <ng-template ngbSlide *ngFor="let image of images">
           <div class="carousel-image-container">
@@ -41,10 +41,5 @@
       </ngb-carousel>
     </div>
   </div>
+
 </div>
-
-
-
-
-
-

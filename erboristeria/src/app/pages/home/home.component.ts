@@ -9,11 +9,11 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class HomeComponent {
   images = [
-    { url: 'https://picsum.photos/200/300', alt: 'Prima immagine', title: 'Prodotti per la cura della pelle', description: 'Scopri la nostra gamma di prodotti naturali per la cura della pelle, dermatologicamente testati.' },
-    { url: 'https://picsum.photos/200/300', alt: 'Seconda immagine', title: 'Integratori alimentari', description: 'Integratori naturali per sostenere la tua salute e il tuo benessere quotidiano.' },
-    { url: 'https://picsum.photos/200/300', alt: 'Terza immagine', title: 'Tisane e infusi', description: 'Scopri le nostre selezioni di tisane e infusi bio, ideali per ogni momento della giornata.' },
-    { url: 'https://picsum.photos/200/300', alt: 'Quarta immagine', title: 'Oli essenziali', description: 'Esplora i nostri oli essenziali naturali, perfetti per aromaterapia e trattamenti di bellezza.' },
-    { url: 'https://picsum.photos/200/300', alt: 'Quinta immagine', title: 'Prodotti per la casa', description: 'Prodotti ecologici per la pulizia della casa, sicuri per l\'ambiente e per te.' }
+    { url: 'https://res-console.cloudinary.com/dkwyldbhg/thumbnails/v1/image/upload/v1720620173/Y2FzYWZhY2lsZS1wcm9mdW1vLWNhc2EtTG9jaGVyYmVyLVZFTkVUSUFFLURJRkZVU09SSS1HUkFORElfaGRmbzJ4/drilldown', alt: 'Prima immagine', title: 'Profumatori d\'ambiente', description: 'Scopri la nostra selezione di profumatori d\'ambiente per creare un\'atmosfera unica e rilassante nella tua casa.' },
+    { url: 'https://res-console.cloudinary.com/dkwyldbhg/thumbnails/v1/image/upload/v1720620259/SS1icmFuZC1kaS1pbnRlZ3JhdG9yaS1hbGltZW50YXJpLXBpdS12ZW5kdXRpLW5lbGxlLWZhcm1hY2llLW9ubGluZS1uZWwtMjAyMF9zZ2djM2s=/drilldown', alt: 'Seconda immagine', title: 'Integratori Alimentari', description: 'Integratori naturali per sostenere la tua salute e il tuo benessere quotidiano.' },
+    { url: 'https://res-console.cloudinary.com/dkwyldbhg/thumbnails/v1/image/upload/v1720620333/ZXJiZV9jaGVfY3VyYW5vX3Byb3ByaWV0w6Bfam14aGZm/drilldown', alt: 'Terza immagine', title: 'Erbe Officinali', description: 'Scopri le nostre selezioni di erbe officinali, tisane, the e infusi bio, ideali per ogni momento della giornata.' },
+    { url: 'https://res-console.cloudinary.com/dkwyldbhg/thumbnails/v1/image/upload/v1720620002/bF9hcm9tYXRlcmFwaWFfcTI0Y29k/drilldown', alt: 'Quarta immagine', title: 'Oli Essenziali', description: 'Esplora i nostri oli essenziali naturali, perfetti per aromaterapia e trattamenti di bellezza.' },
+    { url: 'https://res-console.cloudinary.com/dkwyldbhg/thumbnails/v1/image/upload/v1720620426/Y29zbWV0aWNpLW5hdHVyYWxpLWxpYnJpX3BsamljNQ==/drilldown', alt: 'Quinta immagine', title: 'Cosmesi Naturale', description: '"Esplora la nostra gamma di cosmetici naturali per una bellezza autentica e rispettosa della tua pelle.' }
   ];
   constructor(
     private prodSvc: ProductService,
