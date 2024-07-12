@@ -1,15 +1,20 @@
-<h1>Accedi</h1>
-
-<form>
-
-  <input type="email" name="email"
-  [(ngModel)]="loginData.username"
-  class="form-control" placeholder="email">
-
-  <input type="password" name="password"
-  [(ngModel)]="loginData.password"
-  class="form-control" placeholder="password">
-
-  <button (click)="signIn()" class="btn btn-success">Accedi</button>
-
-</form>
+<div class="container">
+  <h1 class="text-black">Accedi</h1>
+  <form class="p-4 p-md-5 border rounded-3 green">
+    <div class="form-floating mb-3">
+      <input type="text" name="username" [(ngModel)]="loginData.username" class="form-control" placeholder="username">
+      <label for="floatingInput">Username</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" name="password" [(ngModel)]="loginData.password" class="form-control" placeholder="password">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me" class="custom-checkbox" >
+        <span class="checkbox-text">Ricordami</span>
+      </label>
+    </div>
+    <button (click)="signIn()" class="btn btn-success border-black">Accedi</button>
+  </form>
+</div>

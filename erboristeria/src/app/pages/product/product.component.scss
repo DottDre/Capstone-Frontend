@@ -1,3 +1,22 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Assicura che il body occupi almeno l'intera altezza della vista */
+  margin: 0;
+}
+
+.image {
+  background-image: url("../../../assets/sfondo-blog.jpg");
+
+  display: block;
+  background-size: cover; /* Assicura che l'immagine copra tutta l'area disponibile */
+  background-position: center; /* Centra l'immagine */
+  background-repeat: no-repeat;
+  flex-grow: 1;
+}
+
+
+
 .wrapper {
   width: 654px;
   margin: 50px auto;
@@ -11,11 +30,13 @@
   width: 327px;
   height: 420px;
   overflow: hidden; /* Fissa l'altezza e nasconde il contenuto che potrebbe sforare */
+  background-color: #f1f1f1; /* Imposta un colore di sfondo */
 }
 
 .product-img img {
   width: 100%;
-  height: auto; /* Imposta larghezza al 100% per adattarsi alla larghezza del contenitore */
+  height: 100%;
+  object-fit: cover; /* L'immagine coprirà l'intera area del contenitore */
   border-radius: 7px 0 0 7px;
 }
 
@@ -60,31 +81,49 @@
 .product-price-btn {
   margin-top: 15px;
   padding: 0 20px;
+  display: flex; /* Imposta il display a flex per allineare gli elementi orizzontalmente */
+  justify-content: space-between; /* Distribuisce gli elementi lungo l'asse principale (orizzontalmente) */
+}
+.product-price-btn2 {
+  margin-top: 15px;
+
+  display: flex; /* Imposta il display a flex per allineare gli elementi orizzontalmente */
+  justify-content: space-between; /* Distribuisce gli elementi lungo l'asse principale (orizzontalmente) */
 }
 
-.product-price-btn p {
+.product-price-btn2 p {
   font-family: 'Trocchi', serif;
   font-size: 24px;
   color: #474747;
 }
 
 .product-price-btn button {
-  width: 176px;
-  height: 50px;
-  margin-left: 10px;
+  width: 50px; /* Riduci la larghezza per le icone */
+  height: 50px; /* Mantieni l'altezza */
   border: none;
-  border-radius: 60px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #ffffff;
-  background-color: #9cebd5;
+  border-radius: 50%; /* Rendi il pulsante circolare */
+  font-size: 24px; /* Dimensione dell'icona */
+  color: white; /* Colore dell'icona */
+  background-color: #81C492; /* Colore di sfondo */
   cursor: pointer;
   outline: none;
+  display: flex; /* Per allineare l'icona al centro verticalmente */
+  justify-content: center; /* Per allineare l'icona al centro orizzontalmente */
+  align-items: center; /* Per allineare l'icona al centro verticalmente */
 }
 
 .product-price-btn button:hover {
-  background-color: #79b0a1;
+  background-color: #6a9d6b; /* Cambia colore al passaggio del mouse */
+}
+.icon-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 24px; /* Dimensione dell'icona */
+  cursor: pointer;
+  outline: none;
+  color: #000000; /* Colore primario di Bootstrap */
+}
+
+.icon-btn:hover {
+  color: #ffffff; /* Colore più scuro al passaggio del mouse */
 }

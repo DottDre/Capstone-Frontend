@@ -27,7 +27,7 @@
       <h2>Benvenuto nel nostro negozio di Erboristeria!</h2>
       <p class="p">Qui troverai una vasta selezione di prodotti naturali per il benessere del corpo e della mente.</p>
     </div>
-    <div>
+    <div class="carousel-container">
       <ngb-carousel *ngIf="images" class="custom-carousel">
         <ng-template ngbSlide *ngFor="let image of images">
           <div class="carousel-image-container">
@@ -40,6 +40,8 @@
         </ng-template>
       </ngb-carousel>
     </div>
+
+
   </div>
 
 </div>

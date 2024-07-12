@@ -1,17 +1,74 @@
-<h1>Registrati</h1>
+<div class="container">
+<h1 class="text-black">Registrati</h1>
 
-<form (ngSubmit)="signUp()">
-  <input type="text" name="username" [(ngModel)]="registerData.username" class="form-control" placeholder="username" required>
-
-  <input type="password" name="password" [(ngModel)]="registerData.password" class="form-control" placeholder="password" required>
-
-  <input type="text" name="firstName" [(ngModel)]="registerData.firstName" class="form-control" placeholder="nome" required>
-
-  <input type="text" name="lastName" [(ngModel)]="registerData.lastName" class="form-control" placeholder="cognome" required>
-
-  <input type="email" name="email" [(ngModel)]="registerData.email" class="form-control" placeholder="email" required>
-
-  <input type="text" name="role" [(ngModel)]="registerData.role" class="form-control" placeholder="role" required>
+<form class="p-4 p-md-5 rounded-3 green" (ngSubmit)="signUp()">
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      name="username"
+      [(ngModel)]="registerData.username"
+      class="form-control"
+      placeholder="username"
+      required
+    />
+    <label for="floatingInput">UserName</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="password"
+      name="password"
+      [(ngModel)]="registerData.password"
+      class="form-control"
+      placeholder="password"
+      required
+    />
+    <label for="floatingInput">Password</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      name="firstName"
+      [(ngModel)]="registerData.firstName"
+      class="form-control"
+      placeholder="nome"
+      required
+    />
+    <label for="floatingInput">Nome</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      name="lastName"
+      [(ngModel)]="registerData.lastName"
+      class="form-control"
+      placeholder="cognome"
+      required
+    />
+    <label for="floatingInput">Cognome</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="email"
+      name="email"
+      [(ngModel)]="registerData.email"
+      class="form-control"
+      placeholder="email"
+      required
+    />
+    <label for="floatingInput">email</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      name="role"
+      [(ngModel)]="registerData.role"
+      class="form-control"
+      placeholder="role"
+      required
+    />
+    <label for="floatingInput">Ruolo</label>
+  </div>
 
   <button type="submit" class="btn btn-success">Registrati</button>
 </form>
+</div>
