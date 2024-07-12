@@ -53,6 +53,9 @@ Benvenuti nel progetto del nostro e-commerce di erboristeria! Questo progetto mi
     npm install
 3. Avvia l'applicazione Angular:
     ng s
-    📞 Contatti
+    
+##  📞 Contatti
 Per qualsiasi domanda o suggerimento, non esitare a contattarmi:
 - **Email:acquarius33@gmail.com**
+
+
