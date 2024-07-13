@@ -1,10 +1,11 @@
 <nav class="navbar navbar-expand-sm">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- Utilizzo di me-auto per posizionare a sinistra -->
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
         </li>
@@ -12,13 +13,18 @@
           <a class="nav-link" routerLink="/product">Prodotti</a>
         </li>
         <li class="nav-item" *ngIf="isUserLoggedIn">
-          <a class="nav-link" routerLink="/order">ordini</a>
+          <a class="nav-link" routerLink="/order">Ordini</a>
         </li>
+      </ul>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!-- Utilizzo di ms-auto per posizionare a destra -->
         <li class="nav-item" *ngIf="isUserLoggedIn">
-          <a class="nav-link" routerLink="/cart">carrello</a>
+          <button class="btn logout-button" routerLink="/cart">
+            <i class="fas fa-shopping-cart"></i><!-- Icona del carrello -->
+          </button>
         </li>
-        <li class="nav-item dropdown"  *ngIf="!isUserLoggedIn">
-          <a class="nav-link dropdown-toggle" (click)="show = !show" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown" *ngIf="!isUserLoggedIn">
+          <a class="nav-link dropdown-toggle" (click)="show = !show" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
             Account
           </a>
           <ul class="dropdown-menu" [ngClass]="{show}">
@@ -27,8 +33,12 @@
             <li><a class="dropdown-item" routerLink="/auth/register">Register</a></li>
           </ul>
         </li>
+        <li class="nav-item">
+          <button (click)="logout()" *ngIf="isUserLoggedIn" class="btn logout-button">
+            <i class="fas fa-sign-out-alt"></i> <!-- Icona del logout -->
+          </button>
+        </li>
       </ul>
-      <button (click)="logout()" *ngIf="isUserLoggedIn" class="btn btn-danger">Esci</button>
     </div>
   </div>
 </nav>

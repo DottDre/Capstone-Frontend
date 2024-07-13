@@ -9,7 +9,8 @@ import { ILoginData } from '../models/ilogin-data';
 
 type AccessData ={
   user:Iuser,
-  token:string
+  token:string,
+  role:string
 }
 
 @Injectable({
@@ -43,10 +44,12 @@ export class AuthService {
 
   login(loginData:ILoginData):Observable<AccessData>{
     return this.http.post<AccessData>(this.loginUrl,loginData)
+
     .pipe(tap(data => {
 
       this.authSubject.next(data.user)
       localStorage.setItem('accessData', JSON.stringify(data))
+      console.log(data);
 
       this.autoLogout(data.token)
 

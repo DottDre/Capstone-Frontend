@@ -1,0 +1,80 @@
+.product-modal {
+  position: fixed; /* Posizione fissa rispetto alla finestra */
+  top: 50%; /* Posiziona al centro verticale della finestra */
+  left: 50%; /* Posiziona al centro orizzontale della finestra */
+  width: 400px; /* Larghezza della modale */
+  padding: 40px; /* Spaziatura interna */
+  transform: translate(-50%, -50%); /* Per centrare esattamente */
+  background: #fff; /* Sfondo bianco */
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); /* Ombra */
+  border: 2px solid #81C492; /* Bordo verde */
+  border-radius: 10px; /* Angoli arrotondati */
+}
+
+.product-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product-modal .modal-title {
+  margin: 0;
+  padding: 0;
+  color: #81C492; /* Colore del titolo */
+}
+
+.product-modal .modal-body {
+  margin-bottom: 20px;
+}
+
+.product-modal .user-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.product-modal .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #81C492; /* Colore del testo */
+  border: none;
+  border-bottom: 1px solid #81C492; /* Bordo inferiore */
+  outline: none;
+  background: transparent;
+}
+
+.product-modal .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #81C492; /* Colore del testo */
+  pointer-events: none;
+  transition: .5s;
+}
+
+.product-modal .user-box input:focus ~ label,
+.product-modal .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #81C492; /* Colore accentuato */
+  font-size: 12px;
+}
+
+.product-modal button {
+  background-color: #fff; /* Sfondo bianco */
+  color: #81C492; /* Colore testo */
+  border: 2px solid #81C492; /* Bordo verde */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.product-modal button:hover {
+  background-color: #81C492; /* Sfondo verde al passaggio */
+  color: #fff; /* Testo bianco al passaggio */
+}

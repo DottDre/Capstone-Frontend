@@ -32,6 +32,8 @@ export class OrderComponent {
       orderItems: orderItems
     };
 
+    console.log('Order request:', orderRequest); // Aggiungi questo log
+
     this.orderService.createOrder(orderRequest).subscribe({
       next: (orderResponse) => {
         console.log('Order placed successfully', orderResponse);

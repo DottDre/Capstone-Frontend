@@ -1,0 +1,73 @@
+.product-edit-modal {
+  position: fixed; /* Posizione fissa rispetto alla finestra */
+  top: 50%; /* Posiziona al centro verticale della finestra */
+  left: 50%; /* Posiziona al centro orizzontale della finestra */
+  width: 400px; /* Larghezza della modale */
+  padding: 40px; /* Spaziatura interna */
+  transform: translate(-50%, -50%); /* Per centrare esattamente */
+  background: #fff; /* Sfondo bianco */
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); /* Ombra */
+  border: 2px solid #81C492; /* Bordo verde */
+  border-radius: 10px; /* Angoli arrotondati */
+}
+
+.product-edit-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.product-edit-modal .modal-title {
+  color: #81C492;
+  margin: 0;
+}
+
+.product-edit-modal .modal-body {
+  padding-bottom: 20px;
+}
+
+.product-edit-modal .form-group {
+  margin-bottom: 20px;
+}
+
+.product-edit-modal .form-group label {
+  color: #81C492;
+}
+
+.product-edit-modal .form-control {
+  border: 1px solid #81C492;
+}
+
+.product-edit-modal .form-control:focus {
+  border-color: #4CAF50;
+  box-shadow: none;
+}
+
+.product-edit-modal .form-control-file {
+  border: 1px solid #81C492;
+}
+
+.product-edit-modal .btn-primary {
+  background-color: #81C492;
+  border-color: #81C492;
+}
+
+.product-edit-modal .btn-primary:hover {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.product-edit-modal .close {
+  color: #81C492;
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.product-edit-modal .close:hover {
+  color: #4CAF50;
+  opacity: 1;
+}

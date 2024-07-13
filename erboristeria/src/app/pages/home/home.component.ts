@@ -19,7 +19,7 @@ export class HomeComponent {
     private prodSvc: ProductService,
     config: NgbCarouselConfig
   ){
-    config.interval = 5000;  // Intervallo di 5 secondi tra le slide (opzionale)
+    config.interval = 2000;  // Intervallo di 5 secondi tra le slide (opzionale)
     config.wrap = true;      // Il carosello torna alla prima slide dopo l'ultima (opzionale)
     config.keyboard = true;  //
   }

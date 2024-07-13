@@ -1,8 +1,9 @@
 <div class="image">
-<div class="container"  >
+  <div class="container"  >
+  <h1 class="pt-5">I Nostri Prodotti</h1>
   <div class="d-flex justify-content-end">
-    <button class="btn btn-primary icon-btn" (click)="openProductModal()">
-      <i class="fas fa-plus"></i>
+    <button class="btn btn-primary icon-btn" (click)="openProductModal()" *ngIf="isAdmin">
+      <i class="fas fa-plus">Aggiungi</i>
     </button>
   </div>
   <div class="row">
@@ -25,10 +26,10 @@
             <button type="button" (click)="addToCart(product)">
               <i class="fas fa-shopping-cart"></i>
             </button>
-            <button type="button" (click)="openEditModal(product)">
+            <button type="button" (click)="openEditModal(product)" *ngIf="isAdmin">
               <i class="fas fa-pen"></i>
             </button>
-            <button type="button" (click)="deleteProduct(product.id)">
+            <button type="button" (click)="deleteProduct(product.id)" *ngIf="isAdmin">
               <i class="fas fa-trash-alt"></i>
             </button>
           </div>
@@ -41,26 +42,3 @@
 
 </div>
 
-
-
-
-<!--
-<button class="btn btn-primary" (click)="openCategoryModal()">Add Category</button>
-<div class="row">
-    <div *ngFor="let product of products" class="col-md-4">
-      <div class="card mb-4">
-        <img *ngIf="product.imgFile" [src]="product.imgFile" class="card-img-top" alt="{{product.name}}">
-        <div class="card-body">
-          <h5 class="card-title">{{ product.name }}</h5>
-          <p class="card-text">{{ product.description }}</p>
-          <p class="card-text"><strong>Price:</strong> {{ product.price | currency }}</p>
-          <p class="card-text"><strong>Stock:</strong> {{ product.stock }}</p>
-          <p class="card-text"><strong>Category:</strong> {{ product.categoryId.name}}</p>
-          <button class="btn btn-warning" (click)="openEditModal(product)">Edit</button>
-          <button class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button>
-           Aggiungi il pulsante "Aggiungi al Carrello"
-          <button class="btn btn-success" (click)="addToCart(product)">Aggiungi al Carrello</button>
-        </div>
-      </div>
-    </div>
-  </div>-->

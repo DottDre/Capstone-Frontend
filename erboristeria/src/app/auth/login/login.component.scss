@@ -1,10 +1,92 @@
-.green{
-  background-color: #81C492 ;
+.login-box {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: #fff; /* Sfondo bianco */
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border: 2px solid #81C492; /* Bordo verde (#81C492) */
+  border-radius: 10px;
+  height: 450px;
 }
-.btn{
-  background-color: #81C492;
-  color: black;
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #81C492; /* Colore del testo */
+  text-align: center;
 }
-.btn:hover{
-  color: white;
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #81C492; /* Colore del testo */
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #81C492; /* Colore del bordo inferiore */
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #81C492; /* Colore del testo */
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #81C492; /* Colore accentuato */
+  font-size: 12px;
+}
+
+.login-box .register-text {
+  text-align: center; /* Allinea il testo al centro */
+  margin-top: 20px; /* Aggiunge spazio sopra il paragrafo */
+}
+
+.login-box .register-text span {
+  margin-right: 5px; /* Aggiunge spazio tra "Non sei registrato?" e il link */
+}
+
+.login-box form a {
+  color: #81C492; /* Colore del testo */
+  font-size: 16px;
+
+  transition: .5s;
+  letter-spacing: 4px;
+}
+
+.login-box form a:hover {
+  color: #4CAF50; /* Cambia colore al passaggio del mouse */
+}
+
+.login-box button {
+  background-color: #fff; /* Sfondo bianco */
+  color: #81C492; /* Colore testo */
+  border: 2px solid #81C492; /* Bordo verde (#81C492) */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #81C492; /* Sfondo verde al passaggio */
+  color: #fff; /* Testo bianco al passaggio */
 }

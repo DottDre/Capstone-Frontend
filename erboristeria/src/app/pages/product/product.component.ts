@@ -24,6 +24,7 @@ export class ProductComponent {
   ImageFile: File | null = null;
   editingProduct: Iproduct | null = null;
   private subscriptions: Subscription = new Subscription();
+  isAdmin: boolean = false;
 
 
   constructor(
@@ -34,6 +35,13 @@ export class ProductComponent {
   ) {}
 
   ngOnInit() {
+    const userRole = localStorage.getItem('accessData');
+    if(userRole){
+      const role = JSON.parse(userRole)
+      this.isAdmin = role.role === 'ADMIN'
+      console.log('Ruolo utente:', this.isAdmin);
+    }
+
     const productSub = this.prodSvc.getAll().subscribe({
       next: (products: Iproduct[]) => {
         this.products = products;
@@ -50,6 +58,8 @@ export class ProductComponent {
   ngOnDestroy() {
     this.subscriptions.unsubscribe();
   }
+
+
 
   loadCategories() {
     const categorySub = this.catSvc.getAll().subscribe({

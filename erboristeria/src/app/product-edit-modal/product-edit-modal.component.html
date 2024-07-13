@@ -1,35 +1,39 @@
-<div class="modal-header">
-  <h4 class="modal-title">Modifica Prodotto</h4>
-  <button type="button" class="close" aria-label="Close" (click)="cancel()">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-<div class="modal-body">
-  <form (ngSubmit)="saveProduct()">
-    <div class="form-group">
-      <label for="name">Nome del Prodotto</label>
-      <input type="text" id="name" name="name" [(ngModel)]="product.name" class="form-control" placeholder="Nome" required>
-    </div>
-    <div class="form-group">
-      <label for="description">Descrizione del Prodotto</label>
-      <input type="text" id="description" name="description" [(ngModel)]="product.description" class="form-control" placeholder="Descrizione" required>
-    </div>
-    <div class="form-group">
-      <label for="stock">Quantità in Magazzino</label>
-      <input type="number" id="stock" name="stock" [(ngModel)]="product.stock" class="form-control" placeholder="Quantità" required>
-    </div>
-    <div class="form-group">
-      <label for="price">Prezzo</label>
-      <input type="number" id="price" name="price" [(ngModel)]="product.price" class="form-control" placeholder="Prezzo" required>
-    </div>
-    <div class="form-group">
-      <label for="categoryId">ID Categoria</label>
-      <input type="number" id="categoryId" name="categoryId" [(ngModel)]="product.categoryId" class="form-control" placeholder="ID Categoria" required>
-    </div>
-    <div class="form-group">
-      <label for="imgFile">Immagine</label>
-      <input type="file" id="imgFile" name="imgFile" (change)="onFileSelected($event)" class="form-control-file" accept="image/*">
-    </div>
-    <button type="submit" class="btn btn-primary">Salva Modifiche</button>
-  </form>
+<div class="product-edit-modal">
+  <div class="modal-header">
+    <h4 class="modal-title">Modifica Prodotto</h4>
+    <button type="button" class="close" aria-label="Close" (click)="cancel()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form (ngSubmit)="saveProduct()">
+      <div class="form-group">
+        <label for="productName">Nome del Prodotto</label>
+        <input type="text" id="productName" name="productName" [(ngModel)]="product.name" class="form-control" placeholder="Nome del Prodotto" required>
+      </div>
+      <div class="form-group">
+        <label for="productDescription">Descrizione del Prodotto</label>
+        <input type="text" id="productDescription" name="productDescription" [(ngModel)]="product.description" class="form-control" placeholder="Descrizione del Prodotto" required>
+      </div>
+      <div class="form-group">
+        <label for="productStock">Quantità in Magazzino</label>
+        <input type="number" id="productStock" name="productStock" [(ngModel)]="product.stock" class="form-control" placeholder="Quantità in Magazzino" required>
+      </div>
+      <div class="form-group">
+        <label for="productPrice">Prezzo</label>
+        <input type="number" id="productPrice" name="productPrice" [(ngModel)]="product.price" class="form-control" placeholder="Prezzo" required>
+      </div>
+      <div class="form-group">
+        <label for="productCategoryId">ID Categoria</label>
+        <input type="number" id="productCategoryId" name="productCategoryId" [(ngModel)]="product.categoryId" class="form-control" placeholder="ID Categoria" required>
+      </div>
+      <div class="form-group">
+        <label for="productImage">Immagine</label>
+        <input type="file" id="productImage" name="productImage" (change)="onFileSelected($event)" class="form-control-file" accept="image/*">
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Salva Modifiche</button>
+      </div>
+    </form>
+  </div>
 </div>
