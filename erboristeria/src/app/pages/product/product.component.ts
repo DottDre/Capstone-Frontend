@@ -10,6 +10,7 @@ import { CategoryModalComponent } from '../../category-modal/category-modal.comp
 import { ProductModalComponent } from '../../product-modal/product-modal.component';
 import { ProductEditModalComponent } from '../../product-edit-modal/product-edit-modal.component';
 import { CartService } from '../cart.service';
+import { DeleteProductConfirmationComponent } from '../../delete-product-confirmation/delete-product-confirmation.component';
 
 @Component({
   selector: 'app-product',
@@ -156,6 +157,20 @@ export class ProductComponent {
     });
 
 
+  }
+  confirmDelete(product: Iproduct) {
+    const modalRef = this.modalService.open(DeleteProductConfirmationComponent);
+    modalRef.componentInstance.productToDelete = product;
+    modalRef.result.then(
+      (result: number) => {
+        if (result) {
+          this.deleteProduct(result); // Chiamata al metodo deleteProduct con l'ID del prodotto
+        }
+      },
+      (reason) => {
+        console.log('Modal dismissed with reason:', reason);
+      }
+    );
   }
 
   refreshProducts() {

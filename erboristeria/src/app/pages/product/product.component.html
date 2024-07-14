@@ -1,44 +1,41 @@
 <div class="image">
-  <div class="container"  >
-  <h1 class="pt-5">I Nostri Prodotti</h1>
-  <div class="d-flex justify-content-end">
-    <button class="btn btn-primary icon-btn" (click)="openProductModal()" *ngIf="isAdmin">
-      <i class="fas fa-plus">Aggiungi</i>
-    </button>
-  </div>
-  <div class="row">
-    <div class="col-md-6" *ngFor="let product of products">
-      <div class="wrapper">
-        <div class="product-img">
-          <img [src]="product.imgFile" [alt]="product.name">
-        </div>
-        <div class="product-info">
-          <div class="product-text">
-            <h1>{{ product.name }}</h1>
-            <p>Categoria: {{ product.categoryId.name}}</p>
-            <p>{{ product.description }}</p>
-            <h2>Articoli disponibili: {{ product.stock }}</h2>
-            <div class="product-price-btn2">
-              <p >€ <span>{{ product.price }}</span></p>
-            </div>
+  <div class="container">
+    <h1 class="pt-5">I Nostri Prodotti</h1>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-primary icon-btn" (click)="openProductModal()" *ngIf="isAdmin">
+        <i class="fas fa-plus"></i> Aggiungi
+      </button>
+    </div>
+    <div class="row">
+      <div class="col-md-6" *ngFor="let product of products">
+        <div class="wrapper">
+          <div class="product-img">
+            <img [src]="product.imgFile" [alt]="product.name">
           </div>
-          <div class="product-price-btn">
-            <button type="button" (click)="addToCart(product)">
-              <i class="fas fa-shopping-cart"></i>
-            </button>
-            <button type="button" (click)="openEditModal(product)" *ngIf="isAdmin">
-              <i class="fas fa-pen"></i>
-            </button>
-            <button type="button" (click)="deleteProduct(product.id)" *ngIf="isAdmin">
-              <i class="fas fa-trash-alt"></i>
-            </button>
+          <div class="product-info">
+            <div class="product-text">
+              <h1>{{ product.name }}</h1>
+              <p>Categoria: {{ product.categoryId.name }}</p>
+              <p>{{ product.description }}</p>
+              <h2>Articoli disponibili: {{ product.stock }}</h2>
+              <div class="product-price-btn2">
+                <p>€ <span>{{ product.price }}</span></p>
+              </div>
+            </div>
+            <div class="product-price-btn">
+              <button type="button" (click)="addToCart(product)">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+              <button type="button" (click)="openEditModal(product)" *ngIf="isAdmin">
+                <i class="fas fa-pen"></i>
+              </button>
+              <button type="button" class="btn btn-danger" (click)="confirmDelete(product)" *ngIf="isAdmin">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 </div>
-
-</div>
-

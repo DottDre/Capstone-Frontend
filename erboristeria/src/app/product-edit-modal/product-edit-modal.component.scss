@@ -12,6 +12,7 @@
   border-radius: 10px; /* Angoli arrotondati */
 }
 
+
 .product-edit-modal .modal-header {
   display: flex;
   justify-content: space-between;
@@ -51,12 +52,12 @@
   border: 1px solid #81C492;
 }
 
-.product-edit-modal .btn-primary {
+.product-edit-modal .btn {
   background-color: #81C492;
   border-color: #81C492;
 }
 
-.product-edit-modal .btn-primary:hover {
+.product-edit-modal .btn:hover {
   background-color: #4CAF50;
   border-color: #4CAF50;
 }
@@ -70,4 +71,41 @@
 .product-edit-modal .close:hover {
   color: #4CAF50;
   opacity: 1;
+}
+.product-edit-modal .close {
+  background-color: #fff; /* Sfondo bianco */
+  color: #81C492; /* Colore testo */
+  border: 2px solid #81C492; /* Bordo verde */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.product-edit-modal .close:hover {
+  background-color: #81C492; /* Sfondo verde al passaggio */
+  color: #fff; /* Testo bianco al passaggio */
+}
+.product-edit-modal .form-group input[type="file"] {
+  font-size: 16px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.product-edit-modal .form-group input[type="file"]::-webkit-file-upload-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #81C492;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.product-edit-modal .form-group input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #4CAF50;
 }

@@ -1,0 +1,10 @@
+<div class="modal-header">
+  <h4 class="modal-title">Conferma Eliminazione Prodotto</h4>
+</div>
+<div class="modal-body">
+  <p>Sei sicuro di voler eliminare il prodotto <strong>"{{ productToDelete?.name }}"</strong>?</p>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="cancelDelete()">Annulla</button>
+  <button type="button" class="btn btn-danger" (click)="confirmDelete()">Elimina</button>
+</div>

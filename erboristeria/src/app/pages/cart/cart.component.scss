@@ -1,0 +1,65 @@
+.cart {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cart .list-group-item {
+  border: none;
+  padding: 0;
+}
+
+.cart .card {
+  border: none;
+}
+
+.cart .card-img {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.cart .card-body {
+  padding: 20px;
+}
+
+.cart .card-title {
+  color: #81C492;
+}
+
+.cart .btn-danger {
+  background-color: #ff6666;
+  border: none;
+}
+
+.cart .btn-danger:hover {
+  background-color: #ff3333;
+}
+
+.cart .btn-warning {
+  background-color: #ffcc00;
+  border: none;
+  color: white;
+}
+
+.cart .btn-warning:hover {
+  background-color: #ff9900;
+}
+.cart .btn-success {
+  background-color: #81C492;
+  border: none;
+  margin-right: 10px;
+  color: white;
+  padding: 8px 20px; /* Riduce il padding dei pulsanti */
+  font-size: 0.9rem; /* Riduce la dimensione del testo nei pulsanti */
+}
+
+.cart .btn-success:hover {
+  background-color: #4CAF50;
+}

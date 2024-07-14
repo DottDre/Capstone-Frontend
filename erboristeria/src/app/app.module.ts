@@ -12,6 +12,8 @@ import { CategoryModalComponent } from './category-modal/category-modal.componen
 import { FormsModule } from '@angular/forms';
 import { ProductModalComponent } from './product-modal/product-modal.component';
 import { ProductEditModalComponent } from './product-edit-modal/product-edit-modal.component';
+import { DeleteProductConfirmationComponent } from './delete-product-confirmation/delete-product-confirmation.component';
+import { OrderConfirmationModalComponent } from './order-confirmation-modal/order-confirmation-modal.component';
 
 
 
@@ -23,7 +25,9 @@ import { ProductEditModalComponent } from './product-edit-modal/product-edit-mod
     FooterComponent,
     CategoryModalComponent,
     ProductModalComponent,
-    ProductEditModalComponent
+    ProductEditModalComponent,
+    DeleteProductConfirmationComponent,
+    OrderConfirmationModalComponent
   ],
   imports: [
     BrowserModule,
