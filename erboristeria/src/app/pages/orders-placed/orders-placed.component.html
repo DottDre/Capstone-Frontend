@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <h2>Ordini Ricevuti</h2>
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+  <div *ngIf="orders.length === 0 && !errorMessage">
+    <p>Nessun ordine trovato.</p>
+  </div>
+  <table class="table table-striped" *ngIf="orders.length > 0">
+    <thead>
+      <tr>
+        <th>Ordine num.</th>
+        <th>Utente</th>
+        <th>Data ordine</th>
+        <th>Totale</th>
+        <th>Dettagli ordine</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.id }}</td>
+        <td>{{ order.user.username }}</td>
+        <td>{{ order.orderDate | date: 'dd/MM/yyyy' }}</td>
+        <td>{{ order.totalAmount | currency : 'EUR'}}</td>
+        <td>
+          <ul class="list-unstyled">
+            <li *ngFor="let item of order.orderItems" class="mb-2">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>{{ item.product.name }}</div>
+                <div>{{ item.quantity }} x {{ item.price | currency : 'EUR'}}</div>
+              </div>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

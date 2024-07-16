@@ -3,6 +3,7 @@ import { environment } from '../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
 import { IOrder } from '../models/iorder';
 import { Observable } from 'rxjs';
+import { IordersPlaced } from '../models/iorders-placed';
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +18,8 @@ export class OrderService {
     return this.http.post<IOrder>(this.baseUrl, orderRequest);
   }
 
-  getOrders(): Observable<IOrder[]> {
-    return this.http.get<IOrder[]>(this.baseUrl);
+  getOrders(): Observable<IordersPlaced[]> {
+    return this.http.get<IordersPlaced[]>(this.baseUrl);
   }
 
   getOrderById(id: number): Observable<IOrder> {

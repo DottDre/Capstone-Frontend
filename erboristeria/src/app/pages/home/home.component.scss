@@ -5,14 +5,19 @@
   background-size: cover; /* Assicura che l'immagine copra tutta l'area disponibile */
   background-position: center; /* Centra l'immagine */
   background-repeat: no-repeat;
-  padding-top: 20px;
+  padding-top: 100px;
 
+}
+.color-pic{
+  color: #073D2B;
 }
 .btn{
   font-weight: bold;
 }
 h1, h2{
   font-weight: bold;
+
+
 }
 .p{
   font-size: 20px;
@@ -32,7 +37,7 @@ h1, h2{
 }
 
 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.733); // Sfondo semi-trasparente per il caption
+  background-color: rgba(0, 0, 0, 0.5); // Sfondo semi-trasparente per il caption
   padding: 10px;
   color: #fff; // Testo bianco
 }
@@ -62,3 +67,11 @@ h1, h2{
   background-position: center; // Larghezza massima dell'immagine
 }
 
+.color-btn{
+  color: #073D2B;
+  border: 1px solid #073D2B;
+}
+.color-btn:hover{
+  color: white;
+
+}

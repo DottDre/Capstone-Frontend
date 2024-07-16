@@ -10,6 +10,7 @@ export class NavbarComponent {
   show:boolean = false
   isUserLoggedIn:boolean = false;
 
+
   constructor(
     private AuthSvc:AuthService
   ){}

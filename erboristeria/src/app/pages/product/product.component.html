@@ -5,6 +5,9 @@
       <button class="btn btn-primary icon-btn" (click)="openProductModal()" *ngIf="isAdmin">
         <i class="fas fa-plus"></i> Aggiungi
       </button>
+      <button class="btn btn-success"  *ngIf="isAdmin" routerLink="/ordersPlaced">
+        Ordini Ricevuti
+      </button>
     </div>
     <div class="row">
       <div class="col-md-6" *ngFor="let product of products">

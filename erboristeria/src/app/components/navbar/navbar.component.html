@@ -1,42 +1,46 @@
-<nav class="navbar navbar-expand-sm">
+<nav class="navbar navbar-expand-sm fixed-top">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- Utilizzo di me-auto per posizionare a sinistra -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+          <img src="https://res-console.cloudinary.com/dkwyldbhg/thumbnails/v1/image/upload/v1721121960/ZXJib2NjaGlvM19qMXg0eGo=/drilldown" alt="" style="width: 100px; height: 75px;">
+        </li> <!-- Utilizzo di me-auto per posizionare a sinistra -->
+        <li class="nav-item">
+          <a class="nav-link fs-5 color-pic" aria-current="page" routerLink="/">Home</a>
         </li>
         <li class="nav-item" *ngIf="isUserLoggedIn">
-          <a class="nav-link" routerLink="/product">Prodotti</a>
+          <a class="nav-link fs-5 color-pic" routerLink="/product">Prodotti</a>
         </li>
-
       </ul>
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!-- Utilizzo di ms-auto per posizionare a destra -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center"> <!-- Utilizzo di ms-auto per posizionare a destra -->
         <li class="nav-item" *ngIf="isUserLoggedIn">
           <button class="btn logout-button" routerLink="/cart">
-            <i class="fas fa-shopping-cart"></i><!-- Icona del carrello -->
+            <i class="fas fa-shopping-cart fa-lg"></i><!-- Icona del carrello -->
           </button>
         </li>
         <li class="nav-item dropdown" *ngIf="!isUserLoggedIn">
-          <a class="nav-link dropdown-toggle" (click)="show = !show" role="button" data-bs-toggle="dropdown"
+          <a class="nav-link dropdown-toggle fs-5" (click)="show = !show" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             Account
           </a>
-          <ul class="dropdown-menu" [ngClass]="{show}">
-            <li><a class="dropdown-item" routerLink="/auth/login">Login</a></li>
+          <ul class="dropdown-menu dropdown" [ngClass]="{show}">
+            <li><a class="dropdown-item fs-5" routerLink="/auth/login">Accedi</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" routerLink="/auth/register">Register</a></li>
+            <li><a class="dropdown-item fs-5" routerLink="/auth/register">Registrati</a></li>
           </ul>
         </li>
         <li class="nav-item">
           <button (click)="logout()" *ngIf="isUserLoggedIn" class="btn logout-button">
-            <i class="fas fa-sign-out-alt"></i> <!-- Icona del logout -->
+            <i class="fas fa-sign-out-alt fa-lg"></i> <!-- Icona del logout -->
           </button>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<!-- Aggiungi un padding-top al body per evitare che il contenuto sia nascosto sotto la navbar -->

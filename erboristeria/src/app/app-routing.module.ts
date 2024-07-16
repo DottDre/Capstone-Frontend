@@ -19,7 +19,8 @@ const routes: Routes = [
       () => import('./pages/order/order.module')
       .then(m => m.OrderModule)
     },
-  { path: '', loadChildren: () => import('./pages/cart/cart.module').then(m => m.CartModule) }];
+  { path: '', loadChildren: () => import('./pages/cart/cart.module').then(m => m.CartModule) },
+  { path: '', loadChildren: () => import('./pages/orders-placed/orders-placed.module').then(m => m.OrdersPlacedModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
