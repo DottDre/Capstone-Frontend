@@ -11,12 +11,12 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
 
   registerData:Partial<Iuser> = {
-    username: "john_doe",
-    password: "securePassword123",
-    firstName: "jhon",
-    lastName: "doe",
-    email: "john.doe@example.com",
-    role: "USER"
+    username: "",
+    password: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    role: ""
   }
 
   constructor(

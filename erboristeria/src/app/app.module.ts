@@ -14,6 +14,7 @@ import { ProductModalComponent } from './product-modal/product-modal.component';
 import { ProductEditModalComponent } from './product-edit-modal/product-edit-modal.component';
 import { DeleteProductConfirmationComponent } from './delete-product-confirmation/delete-product-confirmation.component';
 import { OrderConfirmationModalComponent } from './order-confirmation-modal/order-confirmation-modal.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
@@ -27,7 +28,8 @@ import { OrderConfirmationModalComponent } from './order-confirmation-modal/orde
     ProductModalComponent,
     ProductEditModalComponent,
     DeleteProductConfirmationComponent,
-    OrderConfirmationModalComponent
+    OrderConfirmationModalComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

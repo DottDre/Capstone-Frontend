@@ -1,3 +1,4 @@
+import { ContactComponent } from './components/contact/contact.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -20,7 +21,11 @@ const routes: Routes = [
       .then(m => m.OrderModule)
     },
   { path: '', loadChildren: () => import('./pages/cart/cart.module').then(m => m.CartModule) },
-  { path: '', loadChildren: () => import('./pages/orders-placed/orders-placed.module').then(m => m.OrdersPlacedModule) }];
+  { path: '', loadChildren: () => import('./pages/orders-placed/orders-placed.module').then(m => m.OrdersPlacedModule) },
+  {
+    path:'contatti',
+    component:ContactComponent
+  }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
